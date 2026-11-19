@@ -33,3 +33,22 @@ def triple (x : Nat) : Nat :=
 
 example (x : Nat) : triple x = 3 * x := by
   rfl
+
+def add (x : Nat) (y : Nat) : Nat :=
+  x + y
+
+#eval add 3 4
+
+def multiplication (x : Nat) (y : Nat) : Nat :=
+  x * y
+
+#eval multiplication 2 3
+
+example (x y : Nat) (h : x = y) : double x = double y := by
+  rw [h]
+
+example (x y : Nat) (h : x = y) : y = x := by
+  rw [h]
+
+example (x y : Nat) (h : x = y) : square x = square y := by
+  rw [h]
